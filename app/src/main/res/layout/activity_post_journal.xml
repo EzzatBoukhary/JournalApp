@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background9"
+    tools:context=".PostJournalActivity">
+
+    <ImageView
+        android:id="@+id/post_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="9dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_three"
+        android:contentDescription="@string/post_journal_image_description" />
+
+    <ImageView
+        android:id="@+id/postCameraButton"
+        android:layout_width="102dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_imageView"
+        app:layout_constraintEnd_toEndOf="@id/post_imageView"
+        app:layout_constraintStart_toStartOf="@+id/post_imageView"
+        app:layout_constraintTop_toTopOf="@+id/post_imageView"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:contentDescription="@string/camera_icon_description" />
+
+    <TextView
+        android:id="@+id/post_username_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cantora_one"
+        android:text="Gina"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#00695C"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_imageView" />
+
+    <TextView
+        android:id="@+id/post_date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/cantora_one"
+        android:text="Today"
+        android:textColor="#00695C"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_imageView" />
+
+    <EditText
+        android:id="@+id/post_title_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="340dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:fontFamily="@font/cantora_one"
+        android:hint="@string/title"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_imageView" />
+
+    <EditText
+        android:id="@+id/post_description_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/my_rect"
+        android:ems="10"
+        android:fontFamily="@font/cantora_one"
+        android:hint="@string/thoughts"
+        android:inputType="textMultiLine"
+        android:minWidth="340dp"
+        android:minHeight="120dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColorHint="#E0F2F1"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_title_et" />
+
+    <ProgressBar
+        android:id="@+id/post_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:indeterminateTint="#000000"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/post_save_journal_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_description_et"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/post_save_journal_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/save_button"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
